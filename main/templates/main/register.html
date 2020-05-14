@@ -1,0 +1,20 @@
+{% extends "main/home.html" %}
+
+
+
+{% block content %}
+<div class="container" style="padding: 50px">
+	<div class="col-sm-6" style="margin: 0 auto;">
+	<form method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<br><br>
+		<button type="submit" class="btn-primary">Submit</button>
+	</form>
+	</div>
+</div>
+<br><br>
+	If you already have an account,<a href="/login"><strong> login</strong></a> instead.
+{% endblock %}
+
+{% include 'main/includes/footer.html' %}

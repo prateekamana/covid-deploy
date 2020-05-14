@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+   
+    <!-- Site Icons -->
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+  
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Site Title -->
+    <title>RESOURCES</title>
+ 
+
+
+
+</head>
+<style>
+    .ccc {
+    position: relative;
+    color: white;
+    opacity: 0.9;
+    height: 40%;
+    padding-right: 0px; 
+    padding-left: 0px; 
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:white;
+    transform: translate(-50%, -50%);
+  }
+      </style>
+      {% include 'main/includes/header.html'%}
+      <header>
+        <div class="wrapper">
+          <!-- Start Header Section -->
+          <div id="header" class="header-dark">
+              <div class="layer-stretch hdr">
+                  <div class="tbl animated fadeInDown">
+                      <div class="tbl-row">
+                          <!-- Start Header Logo Section -->
+                          <div class="tbl-cell hdr-logo">
+                              <a href="index.html"><img src="{% static 'media/images/Untitled.png' %}" alt="" style="width:60%;height:35%;position: relative;"></a>
+                          </div><!-- End Header Logo Section -->
+                          <div class="tbl-cell hdr-menu">
+                              <!-- Start Menu Section -->
+                              <ul class="menu">
+                                  <li class="menu-megamenu-li">
+                                      <a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Home <i class="fa fa-chevron-down"></i></a>
+                                     
+                                  </li>
+                                  {% if user.is_authenticated %}
+                                  <li>                           
+                                      <a href="/account/" class="mdl-button mdl-js-button mdl-js-ripple-effect">{{user.username}}<i class="fa fa-chevron-down"></i></a>
+                                     
+                                  </li>
+                                  <li>
+                                      <a href="/logout/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Logout <i class="fa fa-chevron-down"></i></a>
+                                  {% else %}
+                                  <li>                           
+                                      <a href="/register/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Register<i class="fa fa-chevron-down"></i></a>
+                                     
+                                  </li>
+                                  <li>
+                                      <a href="/login/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Login <i class="fa fa-chevron-down"></i></a>  
+                                  </li>
+                                  {% endif %}
+                                  <li>
+                                      <a href="/aboutus/" class="mdl-button mdl-js-button mdl-js-ripple-effect">About us<i class="fa fa-chevron-down"></i></a>
+                                     
+                                  </li>
+                                  
+                                    
+                      
+                              </ul><!-- End Menu Section -->
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          </header>
+  
+<body class="host_version"> 
+
+	<!-- Modal -->
+	
+   
+	<!-- END LOADER -->	
+
+    <!-- Start header -->
+    <div class="ccc">
+    <img src="{% static 'images/bbb.jpg'%}" alt="Snow" style="height: 100%; width: 100%;">
+	<header class="top-navbar">
+    
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+                 <!-- Start Header Logo Section -->  <!-- End Header Logo Section -->
+				
+				
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="survey.html">Survey</a></li>
+						<li class="nav-item"><a class="nav-link"  href="/overview/">Overview </a>
+						<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
+						<li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+					</ul>
+					
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	<body>
+        
+            
+            <div class="centered"><h1>RESOURCES </h1></div>
+          </div>
+	</div>
+	
+
+
+            
+
+            <div class="table1" style="padding: 5%;">
+            	<center><b>ONLINE LEARNING PLATFORMS</b></center>
+            	  <center> <table border= "3" width ="1000" height="300px">
+      <tr>
+       <th>Sr.no.</th>
+       <th bgcolor ="">Popular Website</th> 
+       <th>Link</th>
+       </tr>
+    <tr>
+       <td>1</td>
+       <td>Coursera</td> 
+      <td><a href="https://www.coursera.org/">www.coursera.org</td>
+       </tr>
+   <tr>
+       <td>2</td>
+       <td>Udacity</td> 
+      <td><a href="https://www.udacity.com/">www.udacity.com</td>
+       </tr>
+    <tr>
+       <td>3</td>
+       <td>Udemy</td> 
+      <td><a href="https://www.udemy.com/">www.udemy.com</td>
+       </tr>
+     <tr>
+       <td>4</td>
+       <td>edX</td> 
+      <td><a href="https://www.edx.org/">www.edX.org</td>
+        </tr>
+    <tr>
+       <td>5</td>
+       <td>Future learn</td> 
+      <td><a href="https://www.futurelearn.com/">www.futurelearn.com</td>
+       </tr>
+	 <tr>
+       <td>6</td>
+       <td>Skill_share</td> 
+      <td><a href="https://www.skillshare.com/">www.skillshare.com</td>
+       </tr>
+	 <tr>
+       <td>7</td>
+       <td>Khan Academy</td> 
+      <td><a href="https://www.khanacademy.org/">www.khanacademy.com</td>
+       </tr>
+	   <tr>
+       <td>8</td>
+       <td>Open learn</td> 
+      <td><a href="https://www.openlearning.com/">www.openlearning.com</td>
+       </tr>
+	   <tr>
+       <td>9</td>
+       <td>HubSpot</td> 
+      <td><a href="https://academy.hubspot.com/">www.hubspot.com</td>
+       </tr>
+	   <tr>
+       <td>10</td>
+       <td>Tuts+</td> 
+      <td><a href="https://tutsplus.com/">www.tutsplus.com</td>
+       </tr>
+	   <tr>
+       <td>11</td>
+       <td>Santford Online</td> 
+      <td><a href="https://online.stanford.edu/">online.santford.edu/free-courses</td>
+       </tr>
+	   <tr>
+       <td>12</td>
+       <td>Open Culture</td> 
+      <td><a href="http://www.openculture.com/freeonlinecourses">www.openculture.com</td>
+       </tr>
+	   <tr>
+       <td>13</td>
+       <td>Lynda</td> 
+      <td><a href="https://www.lynda.com/">www.lynda.com</td>
+       </tr>
+	   <tr>
+       <td>14</td>
+       <td>Alison</td> 
+      <td><a href="https://alison.com/">www.alison.com</td>
+       </tr>
+	   <tr>
+       <td>15</td>
+       <td>Academic Earth</td> 
+      <td><a href="https://academicearth.org/">www.academicearth.com</td>
+       </tr>
+	   <tr>
+       <td>16</td>
+       <td>Saylor</td> 
+      <td><a href="https://www.saylor.org/">www.saylor.org</td>
+       </tr><tr>
+       <td>17</td>
+       <td>MIT Open courseware</td> 
+      <td><a href="https://ocw.mit.edu/">ocw.mit.edu</td>
+       </tr>
+	   <tr>
+       <td>18</td>
+       <td>Open Yale Courses</td> 
+      <td><a href="https://oyc.yale.edu/">oyc.yale.edu</td>
+       </tr>
+	   <tr>
+       <td>19</td>
+       <td>onefourthlab</td> 
+      <td><a href="https://padhai.onefourthlabs.in/">https://padhai.onefourthlab.in</td>
+       </tr>
+	   <tr>
+       <td>20</td>
+       <td>Coding Ninja</td> 
+      <td><a href="https://www.codingninjas.com/">www.codingninja.com</td>
+       </tr>
+	   </table>
+
+            </div>
+            <div class="table2">
+            	 <center><b>Popular Website for Movies Download/Watch-0nline</b></center>
+     <center> <table border= "3" width ="1000" height="300px">
+      <tr bgcolor="">
+       <th>Sr.no.</th>
+       <th bgcolor ="">Popular Website</th> 
+       <th>Link</th>
+       </tr>
+    <tr>
+       <td>1</td>
+       <td>YIFY Movies</td> 
+      <td><a href="https://yts.ms/">https://yts.ag/</td>
+       </tr>
+   <tr>
+       <td>2</td>
+       <td>MyDownloadTube</td> 
+      <td><a href="https://mydownloadtube.net/">https://mydownloadtube.to/</td>
+       </tr>
+     <tr>
+       <td>3</td>
+       <td>	Just Watch</td> 
+      <td><a href="https://www.justwatch.com/in/movies">https://www.justwatch.com/in/movies</td>
+       </tr>
+	   <tr>
+       <td>4</td>
+       <td>Worldfree4u</td> 
+      <td><a href="https://worldfree4u.ink/">https://worldfree4u.trade</td>
+       </tr>
+	   <tr>
+       <td>5</td>
+       <td>Moviesflix</td> 
+      <td><a href="https://moviesflix.de/">https://moviesflix.com</td>
+       </tr>
+	   <tr>
+       <td>6</td>
+       <td>HD-POPCORN</td> 
+      <td><a href="https://hdpopcorns.wtf/">https://hdpopcorns.wtf</td>
+       </tr>
+	   <tr>
+       <td>7</td>
+       <td>BR-movies</td> 
+      <td><a href="https://blu-ray.world/">https://brmovies.com</td>
+       </tr>
+	   <tr>
+       <td>8</td>
+       <td>Fou Movies</td> 
+      <td><a href="https://www.foumovies.me/">https://www.foumovies.com/</td>
+       </tr>
+	   <tr>
+       <td>9</td>
+       <td>FZ Movies</td> 
+      <td><a href="https://www.mfzmovies.net/">https://www.fzmovies.de</td>
+       </tr><tr>
+       <td>10</td>
+       <td>Filmy Wap Free Movies</td> 
+      <td><a href="https://filmywap.cloud/">https://filmywap.com/</td>
+       </tr>
+	   </table>
+            </div>
+
+            {% include 'main/includes/footer.html' %}
+           
+
+
+  
+
+</body>
+</html>

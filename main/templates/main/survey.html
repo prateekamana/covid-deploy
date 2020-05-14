@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{% static 'images/icons/Home-1.png' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/bootstrap/css/bootstrap.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/animate/animate.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/css-hamburgers/hamburgers.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/select2/select2.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/css/util.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/css/main.css'%}">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+
+    <div class="bg-contact3" style="background-image: url('/static/static1/images/bg-01.jpg'); opacity: 1;">
+        <div class="container-contact3">
+            <div class="wrap-contact3">
+                <form class="contact3-form validate-form" name="myForm">
+                    <span class="contact3-form-title">
+						Survey
+					</span>
+
+                    <div class="wrap-input3 validate-input" data-validate="Name is required">
+                        <input class="input3" type="text" name="fname" placeholder="Your Name">
+                        <span class="focus-input3"></span>
+                    </div>
+
+                    <div class="question">
+                        <span>Are you experiencing any of the following symptoms?</span>
+                        <ul class="list">
+                            <li>Cough</li>
+                            <li>Fever</li>
+                            <li>Difficulty in Breathing</li>
+                        </ul>
+                    </div>
+
+                    <div class="wrap-contact3-form-radio">
+                        <div class="contact3-form-radio m-r-42">
+                            <input class="input-radio3" id="radio1" type="radio" name="choice" value="yes">
+                            <label class="label-radio3" for="radio1">Yes</label>
+                        </div>
+
+                        <div class="contact3-form-radio">
+                            <input class="input-radio3" id="radio2" type="radio" name="choice" value="no">
+                            <label class="label-radio3" for="radio2">No</label>
+                        </div>
+
+                    </div>
+              
+                
+                    <div class="question">
+                        <span>Have you ever had any of the following?</span>
+                        <ul class="list">
+                            <li>Diaetes</li>
+                            <li>Hypertennsion</li>
+                            <li>Lung Disease</li>
+                            <li>Heart Disease</li>
+                        </ul>
+                    </div>
+
+                    <div class="wrap-contact3-form-radio">
+                        <div class="contact3-form-radio m-r-42">
+                            <input class="input-radio3" id="radio3" type="radio" name="choice" value="yes">
+                            <label class="label-radio3" for="radio3">Yes</label>
+                        </div>
+
+                        <div class="contact3-form-radio">
+                            <input class="input-radio3" id="radio4" type="radio" name="choice" value="no">
+                            <label class="label-radio3" for="radio4">No</label>
+                        </div>
+
+                    </div>
+                
+                
+                    <div class="question">
+                        <span>Have you traveled anywhere internationally in the last 28-45 days?</span>
+                    </div>
+
+                    <div class="wrap-contact3-form-radio">
+                        <div class="contact3-form-radio m-r-42">
+                            <input class="input-radio3" id="radio5" type="radio" name="choice" value="yes">
+                            <label class="label-radio3" for="radio5">Yes</label>
+                        </div>
+
+                        <div class="contact3-form-radio">
+                            <input class="input-radio3" id="radio6" type="radio" name="choice" value="no">
+                            <label class="label-radio3" for="radio6">No</label>
+                        </div>
+                    </div>
+              
+                
+
+                    <div class="question">
+                        <span>Which of the followig apply to you?</span>
+                    </div>
+
+                    <div class="wrap-contact3-form-radio">
+                        <div class="contact3-form-radio m-r-42">
+                            <input class="input-radio3" id="radio7" type="radio" name="choice" value="I have recently interacted or lived with someone who has tested positive for COVID-19">
+                            <label class="label-radio3" for="radio7">I have recently interacted or lived with someone who has tested positive for COVID-19</label>
+                        </div>
+
+                        <div class="contact3-form-radio">
+                            <input class="input-radio3" id="radio8" type="radio" name="choice" value="I am a healthcare worker and I examined a COVID-19 confirmed case without protective gear">
+                            <label class="label-radio3" for="radio8">I am a healthcare worker and I examined a COVID-19 confirmed case without protective gear</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="container-contact3-form-btn">
+                    <button class="contact3-form-btn" onclick="openForm()">
+							Submit
+						</button>
+
+                </div>
+                <div class="continue-popup">
+                    <div class="form-popup" id="popupForm">
+                        <form class="form-container" action="/">
+                            <h2>Thank You For Survey!!!</h2>
+                            <img src="{% static 'static1/images/rclick.png'%}" class="center-block img-circle logo-margin-negative">
+                            <button type="submit" 
+                            href="/" class="btn">Continue</button>
+                        </form>
+                    </div>
+                </div>
+                <script>
+                    function openForm() {
+                        var i= true;
+                        i = validateForm();
+                        if(i==true){
+                        document.getElementById("popupForm").style.display = "block";
+                    }
+                    }
+
+                    function closeForm() {
+                        document.getElementById("popupForm").style.display = "none";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="{% static 'static1/vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'static1/vendor/bootstrap/js/popper.js'%}"></script>
+    <script src="{% static 'static1/vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'static1/vendor/select2/select2.min.js'%}"></script>
+    <script>
+        $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+    </script>
+    <script>
+        function validateForm() {
+          var x = document.forms["myForm"]["fname"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+          else{
+              return true;
+          }
+        }
+        </script>
+    <!--===============================================================================================-->
+    <script src="{% static 'static1/js/main.js'%}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+</body>
+
+</html>

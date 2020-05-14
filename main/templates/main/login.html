@@ -1,0 +1,14 @@
+{% extends "main/home.html" %}
+
+
+{% block content %}
+<div class="container"> 
+	<form method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect button button-primary">Submit</button>
+	</form>
+</div>
+<br><br>
+	If you don't already have an account,<a href="/register"><strong> Register</strong></a> instead.
+{% endblock %}

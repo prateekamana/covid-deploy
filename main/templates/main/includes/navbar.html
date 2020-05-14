@@ -1,0 +1,69 @@
+<!--   <nav>
+    <div class="nav-wrapper green darken-3">
+      <a href="#" class="brand-logo">....Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        <li><a href="/login/">Home</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="/account/">{{user.username}}</a></li>
+          <li><a href="/logout/">Logout</a></li>
+        {% else %}
+          <li><a href="/login/">Login</a></li>
+          <li><a href="/register/">Register</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav> -->
+
+  {% load static %}
+<header>
+      <div class="wrapper">
+        <!-- Start Header Section -->
+        <div id="header" class="header-dark">
+            <div class="layer-stretch hdr">
+                <div class="tbl animated fadeInDown">
+                    <div class="tbl-row">
+                        <!-- Start Header Logo Section -->
+                        <div class="tbl-cell hdr-logo">
+                            <a href="index.html"><img src="{% static 'media/images/Untitled.png' %}" alt="" style="width:60%;height:35%;position: relative;"></a>
+                        </div><!-- End Header Logo Section -->
+                        <div class="tbl-cell hdr-menu">
+                            <!-- Start Menu Section -->
+                            <ul class="menu">
+                                <li class="menu-megamenu-li">
+                                    <a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Home <i class="fa fa-chevron-down"></i></a>
+                                   
+                                </li>
+                                {% if user.is_authenticated %}
+                                <li>                           
+                                    <a href="/account/" class="mdl-button mdl-js-button mdl-js-ripple-effect">{{user.username}}<i class="fa fa-chevron-down"></i></a>
+                                   
+                                </li>
+                                <li>
+                                    <a href="/logout/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Logout <i class="fa fa-chevron-down"></i></a>
+                                {% else %}
+                                <li>                           
+                                    <a href="/register/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Register<i class="fa fa-chevron-down"></i></a>
+                                   
+                                </li>
+                                <li>
+                                    <a href="/login/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Login <i class="fa fa-chevron-down"></i></a>  
+                                </li>
+                                {% endif %}
+                                <li>
+                                    <a href="/aboutus/" class="mdl-button mdl-js-button mdl-js-ripple-effect">About us<i class="fa fa-chevron-down"></i></a>
+                                   
+                                </li>
+                                
+                                  
+                    
+                            </ul><!-- End Menu Section -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </header>
+      <!-- End Header Section -->

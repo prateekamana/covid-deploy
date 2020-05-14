@@ -1,0 +1,23 @@
+{% extends "main/header.html" %}
+
+
+{% block content %}
+  <div class="row">
+  	{% for c in categories %}
+    <div class="col s12 m6">
+      <a href="{{c.category_slug}}">
+      <div class="card hoverable light-green darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">{{c.tutorial_category}}</span>
+          <p>{{c.tutorial_summary}}</p>
+        </div>
+        <div class="card-action light-green darken-3">
+        </a>
+          <a href="#">Visit</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}
