@@ -37,7 +37,18 @@
 {% include 'main/includes/header.html'%}
 {% include 'main/includes/navbar.html'%}
 
-<img src="{% static 'media/images/covid imagee.png' %}" style="width: 100%">
+<div id="slider" class="slider-dark slider-gradient">
+  <div class="flexslider slider-wrapper">
+      <ul class="slides">     
+          <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
+              <div class="slider-backgroung-image" style="background-image: url('/static/media/images/covid imagee.png');">
+                  
+                  </div>
+              </div>
+          </li>
+      </ul>
+  <ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li class="flex-nav-next"><a class="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li></ul></div>
+</div>
 
 {% block content %}
 {% endblock %}
