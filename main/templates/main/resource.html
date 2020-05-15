@@ -69,6 +69,22 @@
     transform: translate(-50%, -50%);
   }
       </style>
+	
+	<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
       {% include 'main/includes/header.html'%}
       <header>
         <div class="wrapper">
@@ -129,27 +145,7 @@
     <!-- Start header -->
     <div class="ccc">
     <img src="{% static 'images/bbb.jpg'%}" alt="Snow" style="height: 100%; width: 100%;">
-	<header class="top-navbar">
-    
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-                 <!-- Start Header Logo Section -->  <!-- End Header Logo Section -->
-				
-				
-				<div class="collapse navbar-collapse" id="navbars-host">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="survey.html">Survey</a></li>
-						<li class="nav-item"><a class="nav-link"  href="/overview/">Overview </a>
-						<li class="nav-item"><a class="nav-link" href="contest.html">Contest</a></li>
-						<li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-					</ul>
-					
-				</div>
-			</div>
-		</nav>
-	</header>
+	
 	<!-- End header -->
 	<body>
         
@@ -162,7 +158,7 @@
 
             
 
-            <div class="table1" style="padding: 5%;">
+            <div class="table1" style="overflow-x:auto;">
             	<center><b>ONLINE LEARNING PLATFORMS</b></center>
             	  <center> <table border= "3" width ="1000" height="300px">
       <tr>
@@ -272,7 +268,7 @@
 	   </table>
 
             </div>
-            <div class="table2">
+            <div class="table2" style="overflow-x:auto;">
             	 <center><b>Popular Website for Movies Download/Watch-0nline</b></center>
      <center> <table border= "3" width ="1000" height="300px">
       <tr bgcolor="">
