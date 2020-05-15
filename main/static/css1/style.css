@@ -236,7 +236,7 @@ button {
 /*---------------------------- preloader area ----------------------------*/
 
 .loader_bg {
-     position: fixed;
+     position: absolute;
      z-index: 9999999;
      background: #fff;
      width: 100%;
