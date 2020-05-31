@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Tutorial
 from django.contrib.auth.forms import AuthenticationForm
-from .forms import MyUserForm
+from .forms import MyUserForm, MyLoginForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 
@@ -96,7 +96,7 @@ def aboutus(request):
 def login_req(request):
 	
 	if request.method == "POST":
-		form = AuthenticationForm(request, data=request.POST)
+		form = MyLoginForm(request, data=request.POST)
 		if form.is_valid():
 			username=form.cleaned_data.get('username')
 			password=form.cleaned_data.get('password')
@@ -111,6 +111,5 @@ def login_req(request):
 			messages.error(request, "Invalid username or password")
 
 
-	form = AuthenticationForm()
+	form = MyLoginForm()
 	return render(request, 'main/login.html', {"form":form})
-

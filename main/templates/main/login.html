@@ -2,13 +2,21 @@
 
 
 {% block content %}
-<div class="container"> 
-	<form method="POST">
-		{% csrf_token %}
-		{{form.as_p}}
-		<button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect button button-primary">Submit</button>
-	</form>
-</div>
+<div style=" background-image: url('/static/images/bbb.jpg'); width:100%; color: white;">
+	<div class="container" style="padding:50px; margin: 0 auto;">
+		<div class="col-sm-6" style="margin: 0 auto; margin-top: 7em;"> 
+			<form method="POST">
+				{% csrf_token %}
+				{{form.as_p}}
+				<button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect button button-primary">Submit</button>
+
+			</form>
+		</div>
+	</div>
+
 <br><br>
-	If you don't already have an account,<a href="/register"><strong> Register</strong></a> instead.
+
+<p style="text-align: center; color: white;">If you don't already have an account,<a href="/register"><strong> Register</strong></a> instead.</p>
 {% endblock %}
+
+</div>

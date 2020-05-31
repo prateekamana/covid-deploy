@@ -1,40 +1,32 @@
+{% extends "main/home.html" %}
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Survey Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{% static 'images/icons/Home-1.png' %}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/bootstrap/css/bootstrap.min.css'%}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'static1/fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/animate/animate.css'%}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/css-hamburgers/hamburgers.min.css'%}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/select2/select2.min.css'%}">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{% static 'static1/css/util.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static 'static1/css/main.css'%}">
+    
     <!--===============================================================================================-->
 </head>
 
 <body>
+    {% block content %}
 
-    <div class="bg-contact3" style="background-image: url('/static/static1/images/bg-01.jpg'); opacity: 1;">
-        <div class="container-contact3">
-            <div class="wrap-contact3">
-                <form class="contact3-form validate-form" name= "myForm">
+<div style="background: linear-gradient(to bottom, rgba(0,0,0,1),
+              rgba(255,255,255,0.8)), url('/static/static1/images/bg-01.jpg'); ">
+        
+    
+    <div class="bg-contact3" >
+        <div class="container-contact3" >
+            <div class="wrap-contact3" style="margin-top: 200px">
+                <form class="contact3-form validate-form" name= "myForm" >
                     <span class="contact3-form-title">
-						Survey
-					</span>
+                        Survey
+                    </span>
 
-                    <div class="wrap-input3 validate-input" data-validate="Name is required">
+                    <div class="wrap-input3 validate-input" data-validate="Name is required" >
                         <input class="input3" type="text" name="fname" placeholder="Your Name">
                         <span class="focus-input3"></span>
                     </div>
@@ -118,23 +110,19 @@
                             <input class="input-radio3" id="radio8" type="radio" name="choice" value="I am a healthcare worker and I examined a COVID-19 confirmed case without protective gear">
                             <label class="label-radio3" for="radio8">I am a healthcare worker and I examined a COVID-19 confirmed case without protective gear</label>
                         </div>
-                            <div class="contact3-form-radio">
-                            <input class="input-radio3" id="radio9" type="radio" name="choice" value="None">
-                            <label class="label-radio3" for="radio9">None</label>
-                        </div>
                     </div>
                 </form>
                 <div class="container-contact3-form-btn">
                     <button class="contact3-form-btn" onclick="openForm()">
-							Submit
-						</button>
+                            Submit
+                        </button>
 
                 </div>
                 <div class="continue-popup">
                     <div class="form-popup" id="popupForm">
                         <form class="form-container">
                             <h2>Thank You For Survey!!!</h2>
-                            <img src="{%static 'static1/images/rclick.png" class="center-block img-circle logo-margin-negative">
+                            <img src="{%static 'images/rclick.png" class="center-block img-circle logo-margin-negative">
                             <button type="submit" class="btn">Continue</button>
                         </form>
                     </div>
@@ -155,7 +143,7 @@
             </div>
         </div>
     </div>
-
+</div>
 
     <div id="dropDownSelect1"></div>
 
@@ -199,6 +187,8 @@
 
         gtag('config', 'UA-23581568-13');
     </script>
+
+    {% endblock %}
 
 </body>
 

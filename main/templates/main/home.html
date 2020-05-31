@@ -32,12 +32,52 @@
     <link rel="stylesheet" href="{% static 'css/template_css/flexslider.min.css' %}" />
     <!-- Custom Main Stylesheet CSS -->
     <link rel="stylesheet" href="{% static 'css/template_css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{% static 'images/icons/Home-1.png' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/bootstrap/css/bootstrap.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/animate/animate.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/css-hamburgers/hamburgers.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/vendor/select2/select2.min.css'%}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/css/util.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'static1/css/main.css'%}">
+
+          <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>About Covid</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'css1/bootstrap.min.css'%}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static 'css1/style.css'%}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static 'css1/responsive.css'%}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static 'images/fevicon.png'%}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+       <link rel="stylesheet" href="{% static 'css1/owl.carousel.min.css'%}"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
 </head>
 <body>
 {% include 'main/includes/header.html'%}
 {% include 'main/includes/navbar.html'%}
 
-<img src="{% static 'media/images/covid imagee.png' %}" style="width: 100%">
 
 {% block content %}
 {% endblock %}
