@@ -6,3 +6,8 @@ Tried ./manage.py collectstatic and pasted the headerfiles into the templates, n
 **Update 2**
 
 Issues 1 and 8 solved, 8 more issues to go.
+
+
+**Update 3**
+
+Blogs Model Added
