@@ -35,4 +35,13 @@ class Tutorial(models.Model):
 
 	def __str__(self):
 		return self.tutorial_title
+
+class Blog(models.Model):
+	title = models.CharField(max_length=200)
+	content = models.TextField()
+	published = models.DateTimeField(default = timezone.now())
+
+
+	def __str__(self):
+		return self.title
 # Create your models here.
