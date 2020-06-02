@@ -122,7 +122,7 @@ def own_experience(request):
 		form = BlogForm(request.POST)
 		if form.is_valid():
 			form.save()
-			return redirect("main:blogs")
+			return redirect("/blogs/")
 		else:
 			messages.error(request,"fill all the field")
 	form= BlogForm()
