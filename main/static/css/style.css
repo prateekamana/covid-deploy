@@ -722,7 +722,8 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     padding-top: 100%; }
 
   .hdr-logo a img {
-    height: 30px; }
+    height: 70px; 
+   }
 
   .slider-info p {
     display: none; }
