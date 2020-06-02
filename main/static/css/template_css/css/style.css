@@ -723,7 +723,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 
   .hdr-logo a img {
     height: 70px; 
-    position: fixed;}
+    }
 
   .slider-info p {
     display: none; }
