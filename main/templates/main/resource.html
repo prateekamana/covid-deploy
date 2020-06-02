@@ -94,41 +94,22 @@ tr:nth-child(even){background-color: #f2f2f2}
                   <div class="tbl animated fadeInDown">
                       <div class="tbl-row">
                           <!-- Start Header Logo Section -->
+                          <div class="tbl-cell hdr-logo">
+                            <a href="index.html"><img src="{% static 'images/Logo1.jpg'%}" alt=""></a>
+                        </div>
                          <!-- End Header Logo Section -->
-                          <div class="tbl-cell hdr-menu">
-                              <!-- Start Menu Section -->
-                              <ul class="menu">
-                                  <li class="menu-megamenu-li">
-                                      <a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Home <i class="fa fa-chevron-down"></i></a>
-                                     
-                                  </li>
-                                  {% if user.is_authenticated %}
-                                  <li>                           
-                                      <a href="/account/" class="mdl-button mdl-js-button mdl-js-ripple-effect">{{user.username}}<i class="fa fa-chevron-down"></i></a>
-                                     
-                                  </li>
-                                  <li>
-                                      <a href="/logout/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Logout <i class="fa fa-chevron-down"></i></a>
-                                  {% else %}
-                                  <li>                           
-                                      <a href="/register/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Register<i class="fa fa-chevron-down"></i></a>
-                                     
-                                  </li>
-                                  <li>
-                                      <a href="/login/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Login <i class="fa fa-chevron-down"></i></a>  
-                                  </li>
-                                  {% endif %}
-                                  <li>
-                                      <a href="/aboutus/" class="mdl-button mdl-js-button mdl-js-ripple-effect">About us<i class="fa fa-chevron-down"></i></a>
-                                     
-                                  </li>
-                                  
-                                    
-                      
-                              </ul><!-- End Menu Section -->
-                              
-                          </div>
+                          
                       </div>
+                      <div class="tbl-cell hdr-menu">
+                        <!-- Start Menu Section -->
+                        
+                            
+                
+                                <!-- Start Menu Section -->
+                                {% include 'main/includes/nav.html' %}
+                               <!-- End Menu Section -->
+                                
+                              </div>
                   </div>
               </div>
           </div>
@@ -146,7 +127,8 @@ tr:nth-child(even){background-color: #f2f2f2}
     <div class="ccc">
     <img src="{% static 'images/bbb.jpg'%}" alt="Snow" style="height: 100%; width: 100%;">
 	
-	<!-- End header -->
+  <!-- End header -->
+  {% include 'main/includes/scroll.html' %}
 	<body>
         
             

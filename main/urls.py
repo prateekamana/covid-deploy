@@ -31,6 +31,7 @@ urlpatterns = [
     path ('resources/' ,views.resources ),
     path ('survey/' ,views.survey ),
     path('overview/api/',views.api),
+    path('blogs/experince/',views.own_experience,name= "my experience"),
     path('aboutus/', views.aboutus, name="aboutus"),
     path ('overview/aboutcorona/',views.overview_aboutcorona ),
     path('blogs/',views.blogs),

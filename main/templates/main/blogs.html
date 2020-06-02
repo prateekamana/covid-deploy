@@ -11,41 +11,22 @@
                 <div class="tbl animated fadeInDown">
                     <div class="tbl-row">
                         <!-- Start Header Logo Section -->
-                        <!-- End Header Logo Section -->
-                        <div class="tbl-cell hdr-menu">
-                            <!-- Start Menu Section -->
-                            <ul class="menu">
-                                <li class="menu-megamenu-li">
-                                    <a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Home <i class="fa fa-chevron-down"></i></a>
-                                   
-                                </li>
-                                {% if user.is_authenticated %}
-                                <li>                           
-                                    <a href="/account/" class="mdl-button mdl-js-button mdl-js-ripple-effect">{{user.username}}<i class="fa fa-chevron-down"></i></a>
-                                   
-                                </li>
-                                <li>
-                                    <a href="/logout/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Logout <i class="fa fa-chevron-down"></i></a>
-                                {% else %}
-                                <li>                           
-                                    <a href="/register/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Register<i class="fa fa-chevron-down"></i></a>
-                                   
-                                </li>
-                                <li>
-                                    <a href="/login/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Login <i class="fa fa-chevron-down"></i></a>  
-                                </li>
-                                {% endif %}
-                                <li>
-                                    <a href="/aboutus/" class="mdl-button mdl-js-button mdl-js-ripple-effect">About us<i class="fa fa-chevron-down"></i></a>
-                                   
-                                </li>
-                                
-                                  
-                    
-                            </ul><!-- End Menu Section -->
-                            
+                        <div class="tbl-cell hdr-logo">
+                            <a href="index.html"><img src="{% static 'images/Logo1.jpg'%}" alt=""></a>
                         </div>
+                        <!-- End Header Logo Section -->
+                        
+</div>
+<div class="tbl-cell hdr-menu">
+    <!-- Start Menu Section -->
+    
+        
 
+            <!-- Start Menu Section -->
+            {% include 'main/includes/nav.html' %}
+           <!-- End Menu Section -->
+            
+          </div>
         </header><!-- End Header Section -->
         <!-- Start Page Title Section -->
         <div class="page-ttl"style="background:  url('/static/media/images/slider-1.jpg');
@@ -59,7 +40,9 @@
                    
                 </div>
             </div>
-        </div><!-- End Page Title Section -->
+        </div>
+    </div><!-- End Page Title Section -->
+        {% include 'main/includes/scroll.html' %}
         <!-- Start Blog Section -->
         <div class="blog">
             <div class="layer-stretch">
@@ -69,13 +52,85 @@
                             <div class="row pt-4">
                                 <div class="col-12">
                                     <div class="blog-card">
+                                        <img src="{% static 'images/anandblog.jpg' %}" alt="">
+                                        <div>
+                                            <h4>Coronavirus or COVID-19 Impact on Newly Hired Graduates</h4>
+                                            <div class="blog-meta">
+                                                <p><i class="fas fa-user"></i><span>Admin</span></p>
+                                                <p><i class="fas fa-clock"></i><span>24 Jul</span></p>
+                                                <p><i class="fas fa-bubble"></i><span>29</span></p>
+                                            </div>
+                                           
+                                            <p>The whole world is suffering from coronavirus; in these difficult times, we need to stay strong and stay together. Coronavirus is affecting not only our lifestyle but also the world’s economy. Many global organizations are claiming that there will be a big loss in GDP. So now the most common question that pops to the minds of new graduates is how will this affect jobs for them?
+
+                                                In this degrading economy where some companies are abandoning their employees and some are cutting off their allowances, some companies that are still with their employees and have no plans for lay-offs in the near future. 
+                                                
+                                                The same is happening with the newly hired graduates who were placed in companies through company’s college placement drives. College placements start in the mid of November and go on till the mid of January and the students get placement in their dream companies but with the way coronavirus is spreading, the future only looks bleak. We know that the novel coronavirus is having a worse effect on world’s economy and it is difficult to say that what will happen to the jobs of these newly graduates.
+                                                
+                                                In this article, we try to enlighten you with more aspects of the same. So stay tuned and keep reading.
+                                                
+                                                Getting placed in a company is going to be a difficult task in 2020, where colleges will try every trick up their sleeves to get their students placed in the right companies, there will be a fear of lower placement rates as well.
+                                                
+                                                Amid coronavirus every company in the world is trying to play safe and use their existing resources to the fullest rather than spending on the new ones.
+                                
+                                               <br><h5 style="color: black;">Scary Numbers</h5><br>
+                                                According to the market stats, the tier-1 colleges are likely to witness a cut down of 5% in the placements this year and the tier-2 and tier-3 colleges will be suffering a cut down of around 50% for this year’s placements.
+                                                
+                                                
+                                                <br><h5 style="color: black;">Positives</h5></br>
+                                                However, the tier-1 companies like Amazon, Wipro, Infosys etc have revealed that not only they will not fire any of their employees but also increase the recruitment.
+                                                
+                                                The tier-2 and tier-3 companies have to make some tough choices about their employees. TCS has said that they will increase their recruitment number to around 39,000 in the financial year 2020-21, also Infosys will offer 18,000 new jobs and Wipro will send appointment letters to approximately 20,000 newly hired graduates this year. Clearly, these tech giants don’t want to abandon their hired students.
+                                                
+                                                Some international brands like JP Morgan, Salesforce, SAP, Morgan Stanley, Bank of America and others that have strong Indian presence have taken a 90-day no lay-off pledge assuring employees of their jobs while the lockdown continues.
+                                                
+                                                
+                                                <br><h6 style="color: black;">Challenges</h6></br>
+                                                So in this situation, the newly hired graduates will suffer the following challenges:
+                                            
+                                               
+                                                <br><h6 style="color: black;">1. Fewer Choices:</h6></br>
+                                                
+                                                 When the whole world will be suffering from the economic crisis there will be fewer or no jobs available, in that time getting any job which can provide bread on the table will become one’s priority regardless of their choices.
+                                                
+                                               
+                                                 <br> <h6 style="color: black;">2. Difficulty in Finding Jobs:</h6></br>
+                                                
+                                                As the market will be down globally, there is a possibility that new jobs will dry up and job hunting will become all the more difficult. Though, associating with the top-most institutions can still be helpful to secure a job.
+                                                
+                                                
+                                                <br><h6 style="color: black;">3. Getting a Job Abroad:</h6></br>
+                                                
+                                                 The whole world will be suffering low GDP, in these times all countries will try to provide jobs to their citizens first, in order to do so they will stop recruiting personals’ from other countries, and getting a dream job abroad will become quite tough. 
+                                                
+                                                
+                                                 <br><h6 style="color: black;">What Next?</h6></br>
+                                                So what should newly graduate students with no job offers in hand should do? Well, there is a lot they can do to make their future bright in order to get a good job.
+                                            
+                                                
+                                                <br><h6 style="color: black;">1. Digital Course:</h6></br>
+                                                
+                                                You can utilize the time to acquire new and advanced skills. Adding a few extra skills in your CV can surely help. Enrol in world-renowned courses through online learning platforms with a determination to come out with flying colours. There won’t be any energy in this world to stop you from succeeding after that.
+                                            
+                                                
+                                                <br><h6 style="color: black;">2. Higher Studies:</h6></br>
+                                                
+                                                You can also look to pursue a higher-grade degree course. Not only this will be help you gain knowledge and become master of the subject but also get you a high-paying job.
+                                                </p>
+                                           
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="blog-card">
                                         <img src="{% static 'media/images/image1.jpg' %}" alt="">
                                         <div>
                                             <h4>Tackling stigmatization</h4>
                                             <div class="blog-meta">
-                                                <p><i class="icon-user"></i><span>Admin</span></p>
-                                                <p><i class="icon-clock"></i><span>24 Jul</span></p>
-                                                <p><i class="icon-bubble"></i><span>29</span></p>
+                                                <p><i class="fas fa-user"></i><span>Admin</span></p>
+                                                <p><i class="fas fa-clock"></i><span>24 Jul</span></p>
+                                                <p><i class="fas fa-bubble"></i><span>29</span></p>
                                             </div>
                                             <p>A calamity like COVID-19 brings out the best and worst in a society. We can see that around the world and, here in India, the big challenge is how to reduce the fear factor and make people understand that, just because they have the disease, it doesn’t mean that they are toxic.</p>
                                            
@@ -88,9 +143,9 @@
                                         <div>
                                             <h4>Vulnerable Indians need urgent help to cope with COVID-19 pandemic</h4>
                                             <div class="blog-meta">
-                                                <p><i class="icon-user"></i><span>Admin</span></p>
-                                                <p><i class="icon-clock"></i><span>24 Jul</span></p>
-                                                <p><i class="icon-bubble"></i><span>29</span></p>
+                                                <p><i class="fas fa-user"></i><span>Admin</span></p>
+                                                <p><i class="fas fa-clock"></i><span>24 Jul</span></p>
+                                                <p><i class="fas fa-bubble"></i><span>29</span></p>
                                             </div>
                                             <p>Millions of people in India have a hand-to-mouth existence, and fast response measures put in place to curb the COVID-19 pandemic, are making life even more difficult for them. For this latest in our occasional series by UN country team leaders, Renata Dessallien, the UN Resident Coordinator in India, assesses the current situation. Her text is based on an interview with UN News.</p>
                                             <a href="#"><span>Read More</span><i class="icon-arrow-right"></i></a>
@@ -103,9 +158,9 @@
                                         <div>
                                             <h4>The vulnerable citizens facing a humanitarian crisis</h4>
                                             <div class="blog-meta">
-                                                <p><i class="icon-user"></i><span>Admin</span></p>
-                                                <p><i class="icon-clock"></i><span>24 Jul</span></p>
-                                                <p><i class="icon-bubble"></i><span>29</span></p>
+                                                <p><i class="fas fa-user"></i><span>Admin</span></p>
+                                                <p><i class="fas fa-clock"></i><span>24 Jul</span></p>
+                                                <p><i class="fas fa-bubble"></i><span>29</span></p>
                                             </div>
                                             This disease has two elements. The first is the health phase, and we are extremely preoccupied about that around the world. Here in India, investment in health, around 1% - 1.3% of GDP, is very low, and we are now worried about the consequences of that because it’s not enough to respond to the disease, if it takes the course that it has in other countries.</p>
                                             <a href="#"><span>Read More</span><i class="icon-arrow-right"></i></a>
@@ -126,7 +181,7 @@
                 <div class="layer-wrapper text-center">
                     <div class="layer-ttl"><h4>Write <span class="text-primary">your</span> own experiences</h4></div>
                     
-                    <a href="#" class="btn btn-outline btn-primary btn-pill btn-outline-2x btn-lg mt-3">Tell Us Your Story</a>
+                    <a href="/blogs/experince/" class="btn btn-outline btn-primary btn-pill btn-outline-2x btn-lg mt-3">Tell Us Your Story</a>
                 </div>
             </div>
         </div><!-- End Action Section -->

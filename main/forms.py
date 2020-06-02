@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django import forms
 from django.contrib.auth.models import User
+from .models import Blog
 
 class MyUserForm(UserCreationForm):
 	username=forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}), required=True)
@@ -24,3 +25,10 @@ class MyLoginForm(AuthenticationForm):
 	class Meta:
 		model = User
 		fields = ("username", "password")
+
+class BlogForm(forms.ModelForm):
+	title = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control'}),min_length=5 ,required=True)
+	content = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control'}),min_length=40 ,required=True)
+	class Meta:
+		model = Blog
+		fields=("title","content")
