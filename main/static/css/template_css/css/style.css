@@ -708,7 +708,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   .app-feature-content {
     padding-top: 30px; }
     .app-feature-content:nth-last-child(1) .service-card-2:nth-last-child(1) {
-      margin: 0; } 
+      margin: 0; } }
 /* FROM 0PX TO 480PX */
 @media only screen and (max-width: 480px) {
   .boxed .layer-stretch {
@@ -722,8 +722,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     padding-top: 100%; }
 
   .hdr-logo a img {
-    height: 70px; 
-    }
+    height: 30px; }
 
   .slider-info p {
     display: none; }

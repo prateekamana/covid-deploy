@@ -115,6 +115,7 @@ def login_req(request):
 	form = MyLoginForm()
 	return render(request, 'main/login.html', {"form":form})
 
+
 def own_experience(request):
 
 	if request.method== "POST":
@@ -125,10 +126,4 @@ def own_experience(request):
 		else:
 			messages.error(request,"fill all the field")
 	form= BlogForm()
-	return render(request,'main/my_experince.html',{"form":form})
-
-	
-
-
-
-
+	return render(request,'main/my_experince.html',{"form":form})	
