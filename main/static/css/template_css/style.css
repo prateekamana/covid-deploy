@@ -7297,8 +7297,7 @@ body {
 
 .tbl-cell {
   display: table-cell;
-  position: fixed;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 /* [ LAYOUT CSS START ] */
 .layer-stretch {
@@ -8817,8 +8816,7 @@ body {
   display: inline-block; }
   .hdr-logo a img {
     max-width: 300px;
-    height: 60px;
-}
+    height: 60px; }
 
 .menu {
   text-align: right;
