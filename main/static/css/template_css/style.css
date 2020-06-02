@@ -8817,7 +8817,8 @@ body {
   display: inline-block; }
   .hdr-logo a img {
     max-width: 300px;
-    height: 60px; }
+    height: 60px;
+    position:relative;}
 
 .menu {
   text-align: right;
