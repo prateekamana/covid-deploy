@@ -7297,7 +7297,8 @@ body {
 
 .tbl-cell {
   display: table-cell;
-  vertical-align: middle; }
+  position: fixed;
+  vertical-align: top; }
 
 /* [ LAYOUT CSS START ] */
 .layer-stretch {

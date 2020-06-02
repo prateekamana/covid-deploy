@@ -2,12 +2,17 @@
 
 
 {% block content %}
-<div style=" background-image: url('/static/images/bbb.jpg'); width:100%; color: white;">
+<div style=" background-image: url('/static/images/bbb.jpg'); width:100%; color: rgb(24, 23, 23);">
 	<div class="container" style="padding:50px; margin: 0 auto;">
 		<div class="col-sm-6" style="margin: 0 auto; margin-top: 7em;"> 
-			<form method="POST">
+			<form method="POST" >
+				
 				{% csrf_token %}
-				{{form.as_p}}
+			
+				{% for field in form %}
+          <label class="my_class" for="{{ field.name }} " style="color: black;">{{ field.label }}</label>
+              {{ field }}
+            {% endfor %}
 				<button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect button button-primary">Submit</button>
 
 			</form>
@@ -16,7 +21,7 @@
 
 <br><br>
 
-<p style="text-align: center; color: white;">If you don't already have an account,<a href="/register"><strong> Register</strong></a> instead.</p>
+<p style="text-align: center; color: rgb(19, 18, 18);">If you don't already have an account,<a href="/register"><strong> Register</strong></a> instead.</p>
 {% endblock %}
 
 </div>

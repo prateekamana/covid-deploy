@@ -41,43 +41,21 @@
                 <div class="tbl animated fadeInDown">
                     <div class="tbl-row">
                         <!-- Start Header Logo Section -->
+                        <div class="tbl-cell hdr-logo">
+                            <a href="index.html"><img src="{% static 'images/Logo1.jpg'%}" alt=""></a>
+                        </div>
                         <!-- End Header Logo Section -->
                         <div class="tbl-cell hdr-menu">
                             <!-- Start Menu Section -->
-                            <ul class="menu">
-                                <li class="menu-megamenu-li">
-                                    <a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Home <i class="fa fa-chevron-down"></i></a>
-                                   
-                                </li>
-                                {% if user.is_authenticated %}
-                                <li>                           
-                                    <a href="/account/" class="mdl-button mdl-js-button mdl-js-ripple-effect">{{user.username}}<i class="fa fa-chevron-down"></i></a>
-                                   
-                                </li>
-                                <li>
-                                    <a href="/logout/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Logout <i class="fa fa-chevron-down"></i></a>
-                                {% else %}
-                                <li>                           
-                                    <a href="/register/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Register<i class="fa fa-chevron-down"></i></a>
-                                   
-                                </li>
-                                <li>
-                                    <a href="/lo/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Login <i class="fa fa-chevron-down"></i></a>  
-                                </li>
-                                {% endif %}
-                                <li>
-                                    <a href="/about-us/" class="mdl-button mdl-js-button mdl-js-ripple-effect">About us<i class="fa fa-chevron-down"></i></a>
-                                   
-                                </li>
-                                
-                                  
-                    
-                            </ul><!-- End Menu Section -->
+                            
+                            <!-- End Menu Section -->
                             
                         </div>
+                        {% include 'main/includes/nav.html' %}
 
         </header><!-- End Header Section -->
         <!-- Start Page Title Section -->
+        
         <div class="page-ttl"style=" background:  url('/static/media/images/anand.jpg');
         padding: 5%;
 		color: white;
@@ -85,34 +63,56 @@
         background-size: cover;">
             <div class="layer-stretch">
                 <div class="page-ttl-container">
-					<h1>About<span class="text-primary">Us</span></h1>
-					
-					<p style="text-align: center; font-size: 18px; margin-top: 7%;">
-						The AnandFraternity is delighted to extend a warm welcome to the young minds for the exciting journey of Education with a Difference.
 
-						Anand-ICE, the place where we celebrate excellence and attempt to transform youth into professionals, is amongst the top 10 engineering colleges in Rajasthan.
-				
-						We groom our students in various streams of engineering and accelerate a career-oriented training program to make these young men and women compete in extremely daunting professional situations. Anand-ICE, one of the finest private engineering colleges in Jaipur, has probably the best brains as teachers and scientists to facilitate premium academic excellence along with the nuances of ethics and human values.
-				
-						Our top of the line Corporate Learning Program enables the learner to inculcate Employability Skills and to finally secure a good job. This complementary 400-hour training program assures success to each student. A Dedicated Placement Team then ensures employment with Mega-brands like Byju’s, Deloitte, JSW Steel Limited, IBM India Pvt. Ltd., to name a few.
-				
-						Our placement policy assures 100% placements even the most challenging market downturns. No wonder why we are preferred over other top engineering colleges in Jaipur.
-				
-						All this could not be achieved without a state-of-the-art infrastructure, world-class facilities and laboratories that make Anand-ICE to fall in the list of top 5 engineering colleges in Jaipur. No doubt the students get world-class practical learning enabling them to correlate theory with practice effectively.
-				
-						We also harness the ideas of our students with the help of the Anand Incubation Centre which is established both at the college campus as well as the city, where specialists assist young minds to incubate their business plans and help to turn them into a reality.
-				
-						At Anand-ICE we have tried to realign the entire system. Hence, we have created clubs and societies that would not only nurture diverse creativity but will also satisfy their curiosities of self-expression.
-				
-						While there is a long Jaipur engineering college list, choosing the best college in Rajasthan for B-Tech and M-Tech courses is not a tedious job. You can rely on the brand Anand-ICE to transform your child’s life. Anand-ICE falls in the premium Jaipur engineering colleges list that makes it all the more trust-worthy to get into the college assuring secured academic future.
-				
-						We, at Anand-ICE, do not leave anything to chance. We engage and energize students to deliver in the real world.</p>
+                    <h1>About<span class="text-primary">Us</span></h1>
+                    
+                    
+                    
                    
                 </div>
+                
             </div>
-        </div><!-- End Page Title Section -->
-		<!-- Start Blog Section -->
-		
+        </div>
+    <!-- End Page Title Section -->
+        <!-- Start Blog Section -->
+        <!-- Start Action Section -->
+        {% include 'main/includes/scroll.html' %}
+        <div class="action">
+            <div class="layer-stretch">
+                <div class="layer-wrapper text-center">
+                  
+                    <p style="text-align: center; font-size: 18px; margin-top: 7%;">
+                        The AnandFraternity is delighted to extend a warm welcome to the young minds for the exciting journey of Education with a Difference.
+        
+                        Anand-ICE, the place where we celebrate excellence and attempt to transform youth into professionals, is amongst the top 10 engineering colleges in Rajasthan.
+                
+                        We groom our students in various streams of engineering and accelerate a career-oriented training program to make these young men and women compete in extremely daunting professional situations. Anand-ICE, one of the finest private engineering colleges in Jaipur, has probably the best brains as teachers and scientists to facilitate premium academic excellence along with the nuances of ethics and human values.
+                
+                        Our top of the line Corporate Learning Program enables the learner to inculcate Employability Skills and to finally secure a good job. This complementary 400-hour training program assures success to each student. A Dedicated Placement Team then ensures employment with Mega-brands like Byju’s, Deloitte, JSW Steel Limited, IBM India Pvt. Ltd., to name a few.
+                
+                        Our placement policy assures 100% placements even the most challenging market downturns. No wonder why we are preferred over other top engineering colleges in Jaipur.
+                
+                        All this could not be achieved without a state-of-the-art infrastructure, world-class facilities and laboratories that make Anand-ICE to fall in the list of top 5 engineering colleges in Jaipur. No doubt the students get world-class practical learning enabling them to correlate theory with practice effectively.
+                
+                        We also harness the ideas of our students with the help of the Anand Incubation Centre which is established both at the college campus as well as the city, where specialists assist young minds to incubate their business plans and help to turn them into a reality.
+                
+                        At Anand-ICE we have tried to realign the entire system. Hence, we have created clubs and societies that would not only nurture diverse creativity but will also satisfy their curiosities of self-expression.
+                
+                        While there is a long Jaipur engineering college list, choosing the best college in Rajasthan for B-Tech and M-Tech courses is not a tedious job. You can rely on the brand Anand-ICE to transform your child’s life. Anand-ICE falls in the premium Jaipur engineering colleges list that makes it all the more trust-worthy to get into the college assuring secured academic future.
+                
+                        We, at Anand-ICE, do not leave anything to chance. We engage and energize students to deliver in the real world.</p>
+                   
+                </div>
+                </div>
+            </div>
+        </div><!-- End of Action Section -->
+        
+        
+
+            
+            
+            
+            
         <!-- End Action Section -->
         <!-- Start Footer Section -->
         {% include 'main/includes/footer.html' %}

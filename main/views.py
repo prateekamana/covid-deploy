@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Tutorial
+from .models import Tutorial,Blog
 from django.contrib.auth.forms import AuthenticationForm
-from .forms import MyUserForm, MyLoginForm
+from .forms import MyUserForm, MyLoginForm,BlogForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 
@@ -86,7 +86,8 @@ def survey(request):
 	return render( request, "main/survey.html")		
 
 def blogs(request):
-	return render( request, "main/blogs.html")	
+	all_objects= Blog.objects.all()
+	return render( request, "main/blogs.html", {"data":all_objects})	
 
 def aboutus(request):
 	return render(request, 'main/aboutus.html')	
@@ -113,3 +114,21 @@ def login_req(request):
 
 	form = MyLoginForm()
 	return render(request, 'main/login.html', {"form":form})
+
+def own_experience(request):
+
+	if request.method== "POST":
+		form = BlogForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect("main:blogs")
+		else:
+			messages.error(request,"fill all the field")
+	form= BlogForm()
+	return render(request,'main/my_experince.html',{"form":form})
+
+	
+
+
+
+
