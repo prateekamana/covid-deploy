@@ -15,5 +15,5 @@ Blogs Model Added
 **Update 4**
 
 
-Issue 6 solved
+Issue 7 solved
 Explore Section Shows User's Blogs
