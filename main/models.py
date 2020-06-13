@@ -39,7 +39,7 @@ class Tutorial(models.Model):
 class Blog(models.Model):
 	title = models.CharField(max_length=200)
 	published = models.DateTimeField(default = timezone.now())
-	
+	author = models.CharField(max_length= 30, default="Anonymous")
 	content = models.TextField()
 	
 	def __str__(self):

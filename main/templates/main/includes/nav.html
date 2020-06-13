@@ -71,7 +71,7 @@ body {
 <div class="topnav" id="myTopnav">
   {% if user.is_authenticated %}
   <a href="">{{user.username}}</a>
-  <a href="Logout">Logout</a>
+  <a href="/logout/">Logout</a>
   {% else %}
   <a href="/login/">Log in</a>
   <a href="/register/">Register</a>

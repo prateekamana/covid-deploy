@@ -118,16 +118,25 @@ def login_req(request):
 
 def own_experience(request):
 
-	if request.method== "POST":
-		form = BlogForm(request.POST)
-		if form.is_valid():
-			form.save()
-			return redirect("/blogs/")
-		else:
-			messages.error(request,"fill all the field")
+	if request.user.is_authenticated:
+		if request.method== "POST":
+			form = BlogForm(request.POST)
+			if form.is_valid():
+				blog = form.save(commit=False)
+
+				print('Is authenticated')
+				blog.author = request.user.username
+				print('Author set as ', request.user.username)
+
+				blog.save()
+				return redirect("/explore/")
+			else:
+				messages.error(request,"Fill all the field")
+	else:
+		return HttpResponse("You need to be logged in to post here.")
 	form= BlogForm()
-	return render(request,'main/my_experience.html',{"form":form})	
+	return render(request,'main/my_experience.html', {"form":form})	
 
 def explore(request):
 
-	 return render(request, 'main/explore.html', {"blogs": Blog.objects.all()})
+	return render(request, 'main/explore.html', {"blogs": Blog.objects.all()})
