@@ -1,0 +1,48 @@
+{% extends 'main/home.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<img src="{% static 'media/images/covid imagee.png' %}" style="width: 100%">
+
+<div class="blog">
+    <div class="layer-stretch">
+        <div class="layer-wrapper pb-3">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row pt-4">
+                        <div class="col-12">
+                        	{% for blog in blogs %}
+                            <div class="blog-card">
+                                        <img src="{% static 'images/anandblog.jpg' %}" alt="">
+                                        
+                                            <h4> <!-- title --> {{ blog.title }} </h4>
+
+                                            <!-- <div class="blog-meta">
+                                                <p><i class="fas fa-user"></i><span>Admin</span></p>
+                                                <p><i class="fas fa-clock"></i><span>24 Jul</span></p>
+                                                <p><i class="fas fa-bubble"></i><span>29</span></p>
+                                            </div> -->
+
+                                            <div class="blog-meta">
+                                            	<p><i class="fas fa-user"></i><span>Anonymous</span></p>
+                                            	<p><i class="fas fa-clock"></i><span> {{ blog.published }} </span></p>
+                                            </div>
+                                           
+                                            <h5> <!-- content --> {{ blog.content }} </h5>
+                                           
+                            </div>
+                            <br/>
+                            {% endfor %}          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "main/home.html" %}
+
+
+
+{% block content %}
+<div style=" background-image: url('/static/images/bbb.jpg'); width:100%; color: rgb(24, 23, 23);">
+	<div class="container" style="padding:50px; margin: 0 auto;">
+		<div class="col-sm-6" style="margin: 0 auto; margin-top: 7em;"> 
+			<form method="POST" >
+				
+				{% csrf_token %}
+           	{% for field in form %}
+          		<label class="my_class" for="{{ field.name }} " style="color: black;">{{ field.label }}</label>
+              	{{ field }}
+            {% endfor %}
+
+            <br/>
+				<button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect button button-primary">Submit</button>
+
+			</form>
+		</div>
+	</div>
+
+<br><br>
+
+{% endblock %}
+
+</div>

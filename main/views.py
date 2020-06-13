@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Tutorial,Blog
+from .models import Tutorial, Blog
 from django.contrib.auth.forms import AuthenticationForm
-from .forms import MyUserForm, MyLoginForm,BlogForm
+from .forms import MyUserForm, MyLoginForm, BlogForm
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 
@@ -126,4 +126,8 @@ def own_experience(request):
 		else:
 			messages.error(request,"fill all the field")
 	form= BlogForm()
-	return render(request,'main/my_experince.html',{"form":form})	
+	return render(request,'main/my_experience.html',{"form":form})	
+
+def explore(request):
+
+	 return render(request, 'main/explore.html', {"blogs": Blog.objects.all()})
