@@ -11,3 +11,10 @@ Issues 1 and 8 solved, 8 more issues to go.
 **Update 3**
 
 Blogs Model Added
+
+**Update 4**
+
+
+Issue 7 solved
+Explore Section Shows User's Blogs
+
